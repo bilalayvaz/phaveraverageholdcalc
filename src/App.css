@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width: 576px) {
+  .calculator {
+      padding: 20px !important;
+  }
+  .result-display {
+      font-size: 20px !important;
+  }
+}

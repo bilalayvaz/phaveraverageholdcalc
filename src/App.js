@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FallingPNG from './FallingPNG'; 
 import './App.css'; 
-
+import signature from './signature.svg';
 
 function App() {
     const [averageAmount, setAverageAmount] = useState('');
@@ -21,7 +21,21 @@ function App() {
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
-            <div className="calculator p-5 bg-white rounded shadow position-relative" style={{ width: '400px' }}>
+            <div className="calculator p-4 bg-white rounded shadow position-relative" 
+                style={{ width: '90%', maxWidth: '400px' }}>
+                {/* SVG'yi formun üstüne ekleyin */}
+                <img 
+                    src={signature} 
+                    alt="Signature" 
+                    style={{ 
+                        position: 'absolute', 
+                        top: '-30px', 
+                        left: '50%', 
+                        transform: 'translateX(-50%)', 
+                        maxWidth: '80%', 
+                        height: 'auto'
+                    }} 
+                />
                 <h3 className="text-center mb-4" style={{ color: '#6157ac' }}>Phairdrop S2 Tool</h3>
                 <div className="form-group" style={{ marginBottom: '15px' }}>
                     <label htmlFor="averageAmount">Average Amount</label>
