@@ -13,6 +13,12 @@
   }
 }
 
+.calculator {
+  max-width: 100%;
+  box-sizing: border-box; /* Padding'in genişliği aşmasını engeller */
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -40,9 +46,7 @@
 
 @media (max-width: 576px) {
   .calculator {
-      padding: 20px !important;
-  }
-  .result-display {
-      font-size: 20px !important;
+      width: 90%; /* Mobil ekranlar için genişlik ayarı */
+      padding: 20px; /* Daha küçük padding kullanımı */
   }
 }
