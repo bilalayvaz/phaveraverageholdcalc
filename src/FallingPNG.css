@@ -1,0 +1,30 @@
+body {
+    overflow: hidden; /* Scroll barı gizle */
+}
+
+.falling-pngs {
+    position: absolute;
+    top: 0; /* Üstten başla */
+    width: 100%;
+}
+
+.falling-png {
+    position: absolute; /* Pozisyonu ayarlamak için */
+    animation: fall 4s ease-in forwards; /* Düşme animasyonu */
+    opacity: 1; /* İlk görünürlük */
+    max-width: 100px; /* Maksimum genişlik */
+    max-height: 100px; /* Maksimum yükseklik */
+    width: auto; /* Orantılı boyutlandırma */
+    height: auto; /* Orantılı boyutlandırma */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px); /* Yukarıdan başla */
+        opacity: 1; /* İlk görünürlük */
+    }
+    100% {
+        transform: translateY(100vh); /* Ekranın altına düş */
+        opacity: 0; /* Sonra kaybol */
+    }
+}
